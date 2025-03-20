@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+  base: '/pup_passwordgenerator/',
   build: {
     outDir: 'dist',
     rollupOptions: {
