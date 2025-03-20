@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, #4c1d95, #6b21a8, #db2777);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+}
+input[type="checkbox"]:before {
+  background-color: #00f279;
+  border-color: #000000;
+  color: #ffffff;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  padding: 5px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"]:before {
+  content: "\2714";
+  border: 0.1em solid #f3ecec;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.3em;
+  margin-right: 0.2em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: 0.2s;
+}
+
+input[type="checkbox"]:checked:before {
+  background-color: MediumSeaGreen;
+  border-color: MediumSeaGreen;
+  color: #fff;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo {
+  /* border: 2px solid red; */
+  margin: 0.5rem 0 10px 0;
+}
+.bi-shield-check {
+  font-size: 6em;
+}
+.hero .hero-head {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  background: linear-gradient(to right, #818cf8, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-paragraph {
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 10px 0;
+  color: #d1d5db;
+  text-align: center;
+}
+section {
+  /* border: 2px solid blue; */
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 0 1rem 0;
+}
+.card {
+  /* border: 2px solid white; */
+  width: 50%;
+}
+.card .card-header {
+  /* border: 2px solid red; */
+  display: flex;
+  padding-top: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.card .card-header #password {
+  width: 75%;
+  padding: 8px;
+  border-radius: 8px;
+  height: 3em;
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  border: none;
+  text-align: center;
+  background-color: #3c0c64;
+  color: white;
+}
+
+#refresh-password {
+  position: relative;
+  right: 2em;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Corrected transition */
+}
+
+#refresh-password:hover {
+  color: rgb(224, 80, 89); /* Change color on hover */
+  transform: scale(1.2); /* Scale up on hover */
+}
+.copy-button {
+  background-color: rgba(78, 155, 145, 0.733);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.card .card-header #refresh-password {
+  position: relative;
+  right: 2em;
+  font-size: 1.5rem;
+}
+.card .card-body {
+  /* border: 2px solid grey; */
+}
+.card .card-body .card-controls {
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 10px 0;
+  padding: 6px;
+}
+.card-controls-title {
+  /* border: 2px solid black; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 6px 0;
+}
+.card .card-body .card-controls .card-controls-value {
+  margin: 0px 0 10px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.password-strength-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(221, 241, 240);
+  padding: 8px;
+  height: em;
+  border-radius: 12em;
+  color: rgb(103, 96, 103);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.card .card-body .card-controls .slider {
+  width: 100%;
+}
+.card .card-body .card-checkbox {
+  /* border: 2px solid orange; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 0 0 10px 0;
+  width: 75%;
+}
+
+.card .card-body .card-checkbox label {
+  font-weight: bold;
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.footer {
+  /* border: 2px solid gold; */
+  width: 100%;
+  background-color: rgb(40, 48, 47);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer :nth-child(1) {
+  margin-bottom: 0.5rem;
+}
+.footer a {
+  color: rgb(218, 134, 223);
+}
+
+@media only screen and (min-width: 1441px) {
+  .card .card-body .card-controls label {
+    font-size: 2rem;
+  }
+  .card .card-body .card-checkbox label {
+    font-size: 2rem;
+  }
+
+  .card .card-footer span {
+    font-size: 2rem;
+  }
+  .card .card-footer #password-strength {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .hero .logo .logo-image {
+    height: 6em;
+    width: 6em;
+  }
+  .hero .hero-head {
+    font-size: 3.5rem;
+  }
+  .hero .hero-paragraph {
+    font-size: 1.75rem;
+  }
+  .card .card-header #password {
+    height: 50px;
+  }
+}
+
+/*responsive*/
+@media only screen and (max-width: 768px) {
+  .hero .logo .logo-image {
+    height: 4em;
+    width: 4em;
+  }
+  .hero .hero-head {
+    font-size: 3rem;
+  }
+  .hero .hero-paragraph {
+    font-size: 1.75rem;
+  }
+  .card {
+    /* border: 2px solid black; */
+    width: 100%;
+  }
+  .card-header {
+    /* border: 2px solid red; */
+    width: 100%;
+  }
+  .card .card-header #password {
+    max-width: 600px;
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .hero .logo .logo-image {
+    height: 3em;
+    width: 3em;
+  }
+  .hero .hero-head {
+    font-size: 3rem;
+  }
+  .hero .hero-paragraph {
+    font-size: 1.5rem;
+  }
+  .card {
+    /* border: 2px solid red; */
+    margin-bottom: 2rem;
+  }
+  .card .card-header #password {
+    height: 50px;
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .hero .logo .logo-image {
+    margin: 0;
+  }
+  .hero .hero-head {
+    margin: 0 0 6px 0;
+  }
+  .hero .hero-paragraph {
+    font-size: 1.25rem;
+    margin: 0 0 6px 0;
+  }
+  .card .card-body .card-controls label {
+    font-size: 1.25rem;
+  }
+  .password-strength-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 241, 240);
+    padding: 8px;
+    height: 2em;
+    border-radius: 12em;
+    color: rgb(103, 96, 103);
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .card .card-body .card-checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card .card-body .card-checkbox label {
+    font-size: 1rem;
+  }
+  .card .card-footer span {
+    font-size: 1.2rem;
+  }
+  .card .card-footer #password-strength {
+    padding: 0.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  section {
+    /* border: 2px solid white; */
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero .hero-head {
+    font-size: 2rem;
+  }
+  .hero .hero-paragraph {
+    font-size: 1rem;
+    margin: 0 0 6px 0;
+  }
+  .card .card-header #password {
+    font-size: 1.2rem;
+  }
+  .card .copy-button {
+    /* border: 2px solid red; */
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .hero .hero-head {
+    font-size: 1.5rem;
+  }
+
+  .card .card-header #password {
+    font-size: 1rem;
+    text-align: start;
+    padding: 0.5rem;
+  }
+
+  .password-strength-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 241, 240);
+    padding: 8px;
+    height: 2em;
+    border-radius: 12em;
+    color: rgb(103, 96, 103);
+    font-weight: bold;
+    font-size: 0.75rem;
+  }
+
+  .card .copy-button {
+    width: 8em;
+    margin: 0 !important;
+  }
+
+  .card .card-body .card-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 0.5rem;
+  }
+
+  input[type="checkbox"] {
+    transform: scale(1.2);
+    padding: 0;
+    margin: 0;
+  }
+
+  input[type="checkbox"]:before {
+    content: "\2714";
+    border: 0.1em solid #f3ecec;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1em;
+    height: 1.2em;
+    padding-left: 0.1em;
+    padding-bottom: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: middle;
+    color: transparent;
+    transition: 0.2s;
+  }
+
+  input[type="checkbox"]:checked:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff;
+  }
+}
+@media only screen and (max-width: 309px) {
+  .card .card-header #password {
+    font-size: 10px;
+  }
+}
